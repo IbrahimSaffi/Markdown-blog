@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blog</title>
+</head>
+<body class="main-body">
+    <h1>Best Blog ever</h1>
+    <p>Blog powered by markdown</p>
+    <p>click on overview of any article to view full article</p>
+    <% articles.map(article=>{%>
+        <a href="/articles/view/<%= article._id %>" class="article">
+            <h1><%= article.title %> </h1>
+            <h2><%= article.body %></h2>
+            <div>
+                <p><%= article.author %></p>
+                <p><%= article.created_at %></p>
+            </div>
+        </a>
+      <form action='/articles/del/<%= article._id %>' method="post">
+        <button type="submit" >Delete</button>
+      </form>
+        <%}) %>
+    <a href="/articles/new" class="new-btn" >
+        <button class="submit-btn new-btn">
+            New Article
+        </button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Write New Article</title>
+</head>
+<body class="new-body">
+    <h1 class="new-page-title">Add new blogpost</h1>
+    <form action="/articles/add" method="post">
+        <div class="form-field">
+            <label for="title">Add Title</label>
+            <input type="text" name="title" value="" required>
+        </div>
+        <div class="form-field">
+            <label for="data">Add Body</label>
+            <input type="text" name="data"  value="" required>
+        </div>
+        <div class="form-field">
+            <label for="author">Add Author name</label>
+            <input type="text" name="author" value="" required>
+        </div>
+        <button class="submit-btn" type="submit"> Add article</button>
+    </form>
+</body>
+</html>
