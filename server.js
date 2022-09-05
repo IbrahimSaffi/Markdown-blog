@@ -19,4 +19,4 @@ app.get('/', async (req,res) => {
     res.render("index",{articles:articles})
 
 })
-app.listen(8000);
+app.listen(process.env.PORT || 8000);
