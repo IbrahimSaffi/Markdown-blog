@@ -4,7 +4,7 @@ const { default: mongoose} = require("mongoose")
 const articlesRouter =require('./routes/articles')
 const Article = require("./schemes/article")
 const app = express()
-mongoose.connect("mongodb://localhost:27017/articles")
+mongoose.connect("mongodb+srv://IbrahimSaffi:jmk161651@blog-cluster.snhkuvd.mongodb.net/?retryWrites=true&w=majority")
 .then(()=>{
     console.log("Connected to db")
 }).catch((err)=>console.log("Error",err))
